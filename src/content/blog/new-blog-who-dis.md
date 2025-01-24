@@ -60,7 +60,7 @@ Essentially it saved me from ending up in this scenario:
 
 Astro is neat, you can do some cool stuff. I borrowed [this](https://github.com/satnaing/astro-paper) template cause I thought it was also neat. A few hours later and I've got a basic site...on my computer. Can you all check out my site at localhost:4321?
 
-### Git Ye Gone
+### Git Ye Gone and Cloud Woes
 
 Cool so to recap:
 
@@ -68,7 +68,28 @@ Cool so to recap:
 - [x] Site
 - [ ] Literally Everything Else
 
-FINISHING THIS WHEN I FIGURE EVERYTHING ELSE OUT
-erything Else
+Well, I started with getting Github set up which was easy enough.  The project can be found [here](https://github.com/noah344/noah-rambles).  I did this for reasons I'll explain later!
 
-FINISHING THIS WHEN I FIGURE EVERYTHING ELSE OUT
+Now, setting up a static webpage is fairly easy, if you aren't worried about security.  It's as simple as creating an AWS S3 bucket, tossing your site up there, and allowing public access!
+
+The concern there is that this would list the site in plain ol' HTTP, and seeing as this is supposed to be showing how proficient I am, I figured that would be a bad idea.
+
+The solution to this is to use a combination of AWS CloudFront, Route53 DNS Alias records, and roughly 6 hours of troubleshooting.  That last part is key.
+
+CloudFront is what's known as a CDN or Content Delivery Network.  It essentially hosts cached versions of content on servers across the world, allowing for faster access to the resources instead of them having to wait for data to travel all the way to them.
+
+Side note, you can tell I spent 6 hours troubleshooting cause my writing is getting lazy and bad!
+
+CloudFront also happens to be able to take HTTP requests, and force them to be HTTPS requests AND it can stop you from having to make your S3 buckets publicly available, a couple extra nice security features that I really wanted to get setup.
+
+The problem here starts when you follow three different guides provided by AWS, each one adding an additional layer of security in ways that completely invalidate the last guide you followed:  [1](https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html), [2](https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html), [3](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started-cloudfront-overview.html).
+
+On top of that, I swear that the AWS documentation was wrong in one spot, but I'm far too over it to try to figure out where.  Anyways, I found the age-old single tiny thing that was causing problems and I was finally able to set up the website with HTTPS over the Internet!  There's a lot more boring detail in there, but who wants to read about all that.
+
+### Git Ye Gone Again?
+
+Ok, so now the reason I pushed the site up to Github instead of just moving it to AWS by hand (aside from that being an insane thing to do).  Github has "Actions" that allow you to automate some processes when a user-specified event occurs.
+
+In this case, I setup an action that would deploy the Astro project, generate the HTML, and then deploy it out to my AWS S3 bucket!  This means that any time I publich a new post, it will automatically get pushed out to the website which is, say it with me, pretty neat!
+
+So that's the end of my first post!  I have a few projects I want to do that I'll do some writeups for, hopefully that wasn't too dull of a read.  I'm gonna commit this change and push it up, fingers crossed it actually updates!
