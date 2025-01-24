@@ -3,34 +3,18 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+I'm Noah, I wear a lot of hats. Sysadmin, security engineer, developer, team lead/team therapist, project manager. You name it, I've probably done it.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## What's this for?
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+This blog is here to share my thoughts sometimes, post about some of the stuff I do, and maybe help me get a new job!
+
+Here's a link to my [Github](https://github.com/noah344) and one for my [LinkedIn](https://www.linkedin.com/in/noah--harris/) and if you want to shoot me an [email](mailto:noah-rambles.com), there ya go.
+
+## Ok cool but what's it made of?
+
+This site was built using [astro](https://astro.build/) along with the wonderful [astro paper](https://github.com/satnaing/astro-paper) theme. I'd love to say that I made it look this nice on my own but 90% of the work was done with the template.
 
 <div>
   <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
 </div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
