@@ -9,7 +9,7 @@ I'm Noah, I wear a lot of hats. Sysadmin, security engineer, developer, team lea
 
 This blog is here to share my thoughts sometimes and post about some of the stuff I do.
 
-Here's a link to my [Github](https://github.com/noah344) and one for my [LinkedIn](https://www.linkedin.com/in/noah--harris/) and if you want to shoot me an [email](mailto:noah-rambles.com), there ya go.
+Here's a link to my [Github](https://github.com/noah344) and one for my [LinkedIn](https://www.linkedin.com/in/noah--harris/) and if you want to shoot me an [email](mailto:noah.rambles@gmail.com), there ya go.
 
 ## Ok cool but what's it made of?
 
