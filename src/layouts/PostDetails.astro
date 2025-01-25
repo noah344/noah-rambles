@@ -46,7 +46,6 @@ const layoutProps = {
   ogImage: ogUrl,
   scrollSmooth: true,
 };
-
 /* ========== Prev/Next Posts ========== */
 
 const allPosts = posts.map(({ data: { title }, slug }) => ({
@@ -76,6 +75,7 @@ const nextPost =
       </svg><span>Go back</span>
     </button>
   </div>
+  
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title inline-block">
       {title}
@@ -88,6 +88,26 @@ const nextPost =
       editPost={editPost}
       postId={post.id}
     />
+    <div class="mx-auto flex w-full max-w-3xl justify-center gap-4 px-2">
+      <button
+      class="focus-outline mb-2 mt-8 flex justify-center items-center hover:opacity-75 border border-white rounded font-bold w-1/6"
+      onclick="showHide('technical')"
+      >
+      <span>Technical</span>
+      </button>
+      <button
+      class="focus-outline mb-2 mt-8 flex justify-center items-center hover:opacity-75 border border-white rounded font-bold w-1/6"
+      onclick="showHide('fun')"
+      >
+      <span>Fun</span>
+      </button>
+      <button
+      class="focus-outline mb-2 mt-8 flex justify-center items-center hover:opacity-75 border border-white rounded font-bold w-1/6"
+      onclick="showHide('simple')"
+      >
+      <span>Simple</span>
+      </button>
+    </div>
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
@@ -193,6 +213,10 @@ const nextPost =
 </style>
 
 <script is:inline data-astro-rerun>
+  function showHide(ID) {
+    const element = document.getElementById(ID);
+    element.style.display = element.style.display === "none" ? "block" : "none";
+  }
   /** Create a progress indicator
    *  at the top */
   function createProgressBar() {
