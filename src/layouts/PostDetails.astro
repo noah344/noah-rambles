@@ -215,6 +215,12 @@ const nextPost =
 <script is:inline data-astro-rerun>
   function showHide(ID) {
     const element = document.getElementById(ID);
+    const elements = ["technical", "fun", "simple"];
+    elements.forEach(el => {
+      if (el !== ID) {
+        document.getElementById(el).style.display = "none";
+      }
+    });
     element.style.display = element.style.display === "none" ? "block" : "none";
   }
   /** Create a progress indicator
