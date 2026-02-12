@@ -35,6 +35,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         Check out the about tab for a longer explanation, but my goal is to make this content as accessible as possible.
       </p>
+      <p>
+        You can also check out my less formal notes for quick thoughts and CTF writeups <a href="https://notes.noah-rambles.com" class="underline-link">here</a>.
+      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -138,5 +141,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+
+  .underline-link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: #ff0000; /* adjust color */
+    font-weight: 600;
   }
 </style>
